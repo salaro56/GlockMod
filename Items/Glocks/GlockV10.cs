@@ -24,12 +24,13 @@ namespace GlockMod.Items.Glocks
         {
             // item stats
             item.damage = 65;
-            item.useTime = 20;
-            item.useAnimation = 20;
-            item.value = Item.buyPrice(0, 0, 0, 5);
-            item.shootSpeed = 10f;
+            item.useTime = 12;
+            item.useAnimation = 12;
+            item.value = Item.buyPrice(0, 22, 50, 0);
+            item.shootSpeed = 18f;
             item.shoot = ModContent.ProjectileType<glintround>();
             item.useAmmo = ModContent.ItemType<GlintRound>();
+            item.crit = 20;
 
             // item configs
             item.width = 32;
@@ -38,8 +39,8 @@ namespace GlockMod.Items.Glocks
             item.knockBack = 1f;
             item.noMelee = true;
             item.useStyle = ItemUseStyleID.HoldingOut;
-            item.rare = ItemRarityID.White;
-            item.autoReuse = false;
+            item.rare = ItemRarityID.Cyan;
+            item.autoReuse = true;
             item.UseSound = SoundID.Item27;
         }
 

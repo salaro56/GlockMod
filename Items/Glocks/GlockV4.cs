@@ -24,13 +24,14 @@ namespace GlockMod.Items.Glocks
         public override void SafeSetDefaults()
         {
             // item stats
-            item.damage = 16;
-            item.useTime = 20;
-            item.useAnimation = 20;
-            item.value = Item.buyPrice(0, 0, 0, 5);
-            item.shootSpeed = 10f;
+            item.damage = 22;
+            item.useTime = 17;
+            item.useAnimation = 17;
+            item.value = Item.buyPrice(0, 0, 10, 50);
+            item.shootSpeed = 12f;
             item.shoot = ModContent.ProjectileType<glintround>();
             item.useAmmo = ModContent.ItemType<GlintRound>();
+            item.crit = 12;
 
             // item configs
             item.width = 32;
@@ -39,7 +40,7 @@ namespace GlockMod.Items.Glocks
             item.knockBack = 1f;
             item.noMelee = true;
             item.useStyle = ItemUseStyleID.HoldingOut;
-            item.rare = ItemRarityID.White;
+            item.rare = ItemRarityID.Green;
             item.autoReuse = false;
             item.UseSound = SoundID.Item27;
         }

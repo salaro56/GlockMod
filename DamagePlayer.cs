@@ -36,7 +36,7 @@ namespace GlockMod.HJD
             hjdDamageAdd = 0f;
             hjdDamageMult = 1f;
             hjdKnockback = 0f;
-            hjdCrit = 0;
+            hjdCrit = 4;
         }
     }
 }
