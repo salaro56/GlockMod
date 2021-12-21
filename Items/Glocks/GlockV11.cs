@@ -16,7 +16,7 @@ namespace GlockMod.Items.Glocks
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Santa's Glock V.1");
+            DisplayName.SetDefault("Santa's Glock V.11");
             Tooltip.SetDefault("Aim for the tree tops");
         }
 
