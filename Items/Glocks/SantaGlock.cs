@@ -30,15 +30,16 @@ namespace GlockMod.Items.Glocks
             item.useTime = 12;
             item.useAnimation = 12;
             item.value = Item.buyPrice(0, 69, 0, 0);
-            item.shootSpeed = 10f;
+            item.shootSpeed = 12f;
             item.shoot = ModContent.ProjectileType<glintround>();
             item.useAmmo = ModContent.ItemType<GlintRound>();
+            item.crit = 10;
 
             // item configs
             item.width = 32;
             item.height = 32;
             item.maxStack = 1;
-            item.knockBack = 4f;
+            item.knockBack = 8f;
             item.noMelee = true;
             item.useStyle = ItemUseStyleID.HoldingOut;
             item.rare = ItemRarityID.White;
@@ -46,31 +47,9 @@ namespace GlockMod.Items.Glocks
             item.UseSound = SoundID.Item27;
         }
 
-        public override bool AllowPrefix(int pre)
-        {
-            return true;
-        }
-
-        public override bool? PrefixChance(int pre, UnifiedRandom rand)
-        {
-            pre = -1;
-            if(pre == -1)
-            {
-                return true;
-            }
-            else if(pre == 3)
-            {
-                return true;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
         public override bool ConsumeAmmo(Player p) //Tells the game whether the item consumes ammo or not
         {
-            if (Main.rand.Next(2) == 1)
+            if (Main.rand.Next(10) == 1)
             {
                 return false;
             }

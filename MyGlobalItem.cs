@@ -11,6 +11,12 @@ namespace GlockMod
 {
     class MyGlobalItem : GlobalItem
     {
-
+        public override void SetDefaults(Item item)
+        {
+            if(item.type == ItemID.Coal)
+            {
+                item.maxStack = 999;
+            }
+        }
     }
 }

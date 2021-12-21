@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Utilities;
 
 namespace GlockMod.HJD
 {
@@ -26,6 +27,25 @@ namespace GlockMod.HJD
             item.magic = false;
             item.summon = false;
             item.thrown = false;
+        }
+
+        public override int ChoosePrefix(UnifiedRandom rand)
+        {
+            var prefixChooser = new WeightedRandom<int>();
+            prefixChooser.Add(mod.PrefixType("CheefulPrefix"), 3);
+            prefixChooser.Add(mod.PrefixType("FrugalPrefix"), 2);
+            prefixChooser.Add(mod.PrefixType("FestivePrefix"), 1);
+            int choice = prefixChooser;
+            if((item.damage > 0) && item.maxStack == 1)
+            {
+                return choice;
+            }
+            return -1;
+        }
+
+        public override bool ReforgePrice(ref int reforgePrice, ref bool canApplyDiscount)
+        {
+            return true;
         }
 
         public override void ModifyWeaponDamage(Player player, ref float add, ref float mult, ref float flat)

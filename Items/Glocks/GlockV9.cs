@@ -43,27 +43,6 @@ namespace GlockMod.Items.Glocks
             item.UseSound = SoundID.Item27;
         }
 
-        public override bool AllowPrefix(int pre)
-        {
-            return true;
-        }
-
-        public override bool? PrefixChance(int pre, UnifiedRandom rand)
-        {
-            pre = -1;
-            if(pre == -1)
-            {
-                return true;
-            }
-            else if(pre == 3)
-            {
-                return true;
-            }
-            else
-            {
-                return true;
-            }
-        }
 
         public override bool ConsumeAmmo(Player p) //Tells the game whether the item consumes ammo or not
         {
