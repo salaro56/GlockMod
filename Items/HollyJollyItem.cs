@@ -48,9 +48,14 @@ namespace GlockMod.HJD
             return true;
         }
 
+        public override void GetWeaponDamage(Player player, ref int damage)
+        {
+            damage = (int)Math.Ceiling(damage * DamagePlayer.ModPlayer(player).hjdDamage);
+        }
+
         public override void ModifyWeaponDamage(Player player, ref float add, ref float mult, ref float flat)
         {
-            add += DamagePlayer.ModPlayer(player).hjdDamageAdd;
+            add += DamagePlayer.ModPlayer(player).hjdDamage;
             mult *= DamagePlayer.ModPlayer(player).hjdDamageMult;
         }
 

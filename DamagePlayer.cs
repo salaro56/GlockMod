@@ -16,7 +16,7 @@ namespace GlockMod.HJD
             return player.GetModPlayer<DamagePlayer>();
         }
 
-        public float hjdDamageAdd;
+        public float hjdDamage;
         public float hjdDamageMult = 1f;
         public float hjdKnockback;
         public int hjdCrit = 4;
@@ -28,7 +28,7 @@ namespace GlockMod.HJD
 
         private void ResetVariables()
         {
-            hjdDamageAdd = 0f;
+            hjdDamage = 0f;
             hjdDamageMult = 1f;
             hjdKnockback = 0f;
             hjdKnockback = 0f;

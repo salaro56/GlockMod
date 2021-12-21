@@ -18,7 +18,7 @@ namespace GlockMod.Prefixes
 
         public override void Apply(Item item)
         {
-            item.damage *= (int)1.15f;
+            item.damage = (int)(item.damage * 1.15f);
             item.crit += 15;
             item.knockBack *= 1.15f;
         }
