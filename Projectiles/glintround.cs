@@ -28,6 +28,7 @@ namespace GlockMod.Projectiles
             projectile.ignoreWater = true;
             projectile.scale = 1;
             projectile.penetrate = 1;
+            projectile.type = ModContent.ProjectileType<glintround>();
         }
 
         public override void AI()
@@ -44,19 +45,18 @@ namespace GlockMod.Projectiles
                 }
                 else if (merry_colour == 2)
                 {
-                    Main.dust[glintDust].color = Color.Blue;
-                    Lighting.AddLight(projectile.position, 0, 0, 1);
+                    Main.dust[glintDust].color = Color.LightBlue;
+                    Lighting.AddLight(projectile.position, .67f, .84f, .90f);
                 }
                 else if (merry_colour == 3)
                 {
-                    Main.dust[glintDust].color = Color.LightGreen;
-                    Lighting.AddLight(projectile.position, 0, 1, 0);
+                    Main.dust[glintDust].color = Color.White;
+                    Lighting.AddLight(projectile.position, 1, 1, 1);
                 }
                 else
                 {
-                    Main.dust[glintDust].color = Color.White;
-                    Lighting.AddLight(projectile.position, 1, 1, 1);
-                    projectile.light = 1f;
+                    Main.dust[glintDust].color = Color.Gold;
+                    Lighting.AddLight(projectile.position, .8314f, .6863f, .2157f);
                 }
                 projectile.rotation = projectile.velocity.ToRotation() + MathHelper.PiOver2;
             }
@@ -65,45 +65,51 @@ namespace GlockMod.Projectiles
         public override void Kill(int timeLeft)
         {
             Collision.HitTiles(projectile.position + projectile.velocity, projectile.velocity, projectile.width, projectile.height);
-            Main.PlaySound(2, (int)projectile.position.X, (int)projectile.position.Y, 10);
-
-            for (int d = 0; d < 100; d++)
+            Main.PlaySound(SoundID.Item, (int)projectile.position.X, (int)projectile.position.Y, 10);
+            if(merry_colour == 1)
             {
-                int dust = Dust.NewDust((projectile.position), 50, 50, 76, projectile.velocity.X * 0, projectile.velocity.Y * 0, 55, default(Color), 1);
-                int dust2 = Dust.NewDust(new Vector2(projectile.position.X - 16, projectile.position.Y + 16), 90, 10, 76, projectile.velocity.X * 0, projectile.velocity.Y * 0, 55, default(Color), 1);
-                int dust3 = Dust.NewDust(new Vector2(projectile.position.X + 16, projectile.position.Y - 16), 10, 90, 76, projectile.velocity.X * 0, projectile.velocity.Y * 0, 55, default(Color), 1);
-                Main.dust[dust].noGravity = true;
-                Main.dust[dust2].noGravity = true;
-                Main.dust[dust3].noGravity = true;
-                if (merry_colour == 1)
+                for (int i = 0; i < 100; i++)
                 {
-                    Main.dust[dust].color = Color.Red;
-                    Main.dust[dust2].color = Color.Red;
-                    Main.dust[dust3].color = Color.Red;
+                    Vector2 speed = Main.rand.NextVector2CircularEdge(1f, 1f);
+                    Dust d = Dust.NewDustPerfect(projectile.Center, DustID.Snow, speed * 8, Scale: 1.5f);
+                    d.noGravity = true;
+                    d.color = Color.Red;
                 }
-                else if (merry_colour == 2)
-                {
-                    Main.dust[dust].color = Color.Blue;
-                    Main.dust[dust2].color = Color.Blue;
-                    Main.dust[dust3].color = Color.Blue;
-                }
-                else if (merry_colour == 3)
-                {
-                    Main.dust[dust].color = Color.LightGreen;
-                    Main.dust[dust2].color = Color.LightGreen;
-                    Main.dust[dust3].color = Color.LightGreen;
-                }
-                else
-                {
-                    Main.dust[dust].color = Color.White;
-                    Main.dust[dust2].color = Color.White;
-                    Main.dust[dust3].color = Color.White;
-                }
+                Main.PlaySound(SoundID.Item27);
             }
-
+            else if(merry_colour == 2)
+            {
+                for (int i = 0; i < 100; i++)
+                {
+                    Vector2 speed = Main.rand.NextVector2CircularEdge(1f, 1f);
+                    Dust d = Dust.NewDustPerfect(projectile.Center, DustID.Snow, speed * 8, Scale: 1.5f);
+                    d.noGravity = true;
+                    d.color = Color.LightBlue;
+                }
+                Main.PlaySound(SoundID.Item27);
+            }
+            else if(merry_colour == 3)
+            {
+                for (int i = 0; i < 100; i++)
+                {
+                    Vector2 speed = Main.rand.NextVector2CircularEdge(1f, 1f);
+                    Dust d = Dust.NewDustPerfect(projectile.Center, DustID.Snow, speed * 8, Scale: 1.5f);
+                    d.noGravity = true;
+                    d.color = Color.White;
+                }
+                Main.PlaySound(SoundID.Item27);
+            }
+            else
+            {
+                for (int i = 0; i < 100; i++)
+                {
+                    Vector2 speed = Main.rand.NextVector2CircularEdge(1f, 1f);
+                    Dust d = Dust.NewDustPerfect(projectile.Center, DustID.Snow, speed * 8, Scale: 1.5f);
+                    d.noGravity = true;
+                    d.color = Color.Gold;
+                }
+                Main.PlaySound(SoundID.Item27);
+            }            
         }
     }
-
-
-
 }
