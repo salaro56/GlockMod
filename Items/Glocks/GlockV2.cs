@@ -59,10 +59,18 @@ namespace GlockMod.Items.Glocks
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 10);
-            recipe.AddRecipeGroup("IronBar", 10);
-            recipe.AddIngredient(ItemID.Coal, 1);
-            recipe.AddTile(TileID.WorkBenches);
+            recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 5);
+            recipe.AddIngredient(ModContent.ItemType<NaughtyList>(), 1);
+            recipe.AddIngredient(ItemID.DemoniteOre, 10);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
+
+            recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 5);
+            recipe.AddIngredient(ModContent.ItemType<NaughtyList>(), 1);
+            recipe.AddIngredient(ItemID.CrimtaneOre, 10);
+            recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

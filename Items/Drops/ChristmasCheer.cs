@@ -31,7 +31,7 @@ namespace GlockMod.Items.Drops
             item.height = 24;
             item.maxStack = 999;
             item.value = Item.buyPrice(0, 0, 0, 5);
-            item.rare = ItemRarityID.Blue;
+            item.rare = ItemRarityID.White;
         }
     }
 }

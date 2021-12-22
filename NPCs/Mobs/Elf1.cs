@@ -9,7 +9,7 @@ using Terraria.ID;
 using GlockMod.Items.Drops;
 using Microsoft.Xna.Framework;
 
-namespace GlockMod.NPC.Mobs
+namespace GlockMod.NPCs.Mobs
 {
     class Elf1 : ModNPC
     {

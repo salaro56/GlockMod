@@ -62,7 +62,7 @@ namespace GlockMod.Items.Glocks
             recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 10);
             recipe.AddRecipeGroup("IronBar", 10);
             recipe.AddIngredient(ItemID.Coal, 1);
-            recipe.AddTile(TileID.WorkBenches);
+            recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

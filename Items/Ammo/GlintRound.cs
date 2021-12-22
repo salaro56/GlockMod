@@ -20,7 +20,7 @@ namespace GlockMod.Items.Ammo
         public override void SafeSetDefaults()
         {
             item.damage = 8;
-            item.width = 15;
+            item.width = 7;
             item.height = 15;
             item.maxStack = 999;
             item.consumable = true;

@@ -7,6 +7,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using GlockMod.HJD;
+using GlockMod.Items.Drops;
 
 namespace GlockMod.Items.Armour
 {
@@ -43,6 +44,16 @@ namespace GlockMod.Items.Armour
         {
             DamagePlayer modPlayer = DamagePlayer.ModPlayer(player);
             modPlayer.hjdDamageMult *= 1.02f;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 10);
+            recipe.AddIngredient(ModContent.ItemType<WrappingPaper>(), 10);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
         }
     }
 }

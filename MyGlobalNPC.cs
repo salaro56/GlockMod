@@ -20,9 +20,13 @@ namespace GlockMod
             {
                 case NPCID.Merchant:
                 {
-                        if(Main.hardMode == true)
-                        {
 
+                        if(NPC.downedBoss1 == true)
+                        {
+                            shop.item[nextSlot].SetDefaults(ModContent.ItemType<WrappingPaper>());
+                            nextSlot++;
+                            shop.item[nextSlot].SetDefaults(ModContent.ItemType<FragileOrnament>());
+                            nextSlot++;
                         }
                         else
                         {
@@ -77,7 +81,27 @@ namespace GlockMod
                 {
                     Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.ToySled);
                 }
+            }
 
+            if (npc.type == NPCID.EyeofCthulhu)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<NaughtyList>());
+            }
+            else if (npc.boss && System.Array.IndexOf(new int[] { NPCID.EaterofWorldsBody, NPCID.EaterofWorldsHead, NPCID.EaterofWorldsTail }, npc.type) > -1)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<CoalInfusedLead>());
+            }
+            else if(npc.type == NPCID.QueenBee)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<ChristmasWallet>());
+            }
+            else if(npc.type == NPCID.SkeletronHead)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<EnhancedGrip>());
+            }
+            else if(npc.type == NPCID.WallofFlesh)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<GiftWrapping>());
             }
         }
     }

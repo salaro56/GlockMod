@@ -1,4 +1,5 @@
 ﻿using GlockMod.HJD;
+using GlockMod.Items.Drops;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,16 @@ namespace GlockMod.Items.Armour
         {
             DamagePlayer modPlayer = DamagePlayer.ModPlayer(player);
             modPlayer.hjdDamageMult *= 1.02f; 
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 15);
+            recipe.AddIngredient(ModContent.ItemType<WrappingPaper>(), 15);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
         }
     }
 }

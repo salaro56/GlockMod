@@ -22,7 +22,7 @@ namespace GlockMod.Projectiles
             aiType = ProjectileID.Bullet;
             projectile.ranged = true;
             projectile.friendly = true;
-            projectile.width = 7;
+            projectile.width = 15;
             projectile.height = 15;
             projectile.tileCollide = true;
             projectile.ignoreWater = true;

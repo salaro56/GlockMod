@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
+using GlockMod.Items.Drops;
 
 namespace GlockMod.Items.Armour
 {
@@ -30,6 +31,16 @@ namespace GlockMod.Items.Armour
         public override void UpdateEquip(Player player)
         {
             player.moveSpeed += 0.04f;
+        }
+
+        public override void AddRecipes()
+        {
+            ModRecipe recipe = new ModRecipe(mod);
+            recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 12);
+            recipe.AddIngredient(ModContent.ItemType<WrappingPaper>(), 12);
+            recipe.AddTile(TileID.Anvils);
+            recipe.SetResult(this);
+            recipe.AddRecipe();
         }
     }
 }
