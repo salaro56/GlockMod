@@ -62,6 +62,7 @@ namespace GlockMod.Items.Glocks
             recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 5);
             recipe.AddIngredient(ModContent.ItemType<WrappingPaper>(), 5);
             recipe.AddIngredient(ModContent.ItemType<GiftWrapping>());
+            recipe.AddIngredient(ModContent.ItemType<GlockV5>());
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

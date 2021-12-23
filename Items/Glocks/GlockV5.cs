@@ -62,6 +62,7 @@ namespace GlockMod.Items.Glocks
             recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 5);
             recipe.AddIngredient(ItemID.Bone, 10);
             recipe.AddIngredient(ModContent.ItemType<EnhancedGrip>());
+            recipe.AddIngredient(ModContent.ItemType<GlockV4>());
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

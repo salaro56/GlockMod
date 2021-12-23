@@ -63,6 +63,7 @@ namespace GlockMod.Items.Glocks
             recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 5);
             recipe.AddIngredient(ItemID.ShadowScale, 20);
             recipe.AddIngredient(ModContent.ItemType<CoalInfusedLead>());
+            recipe.AddIngredient(ModContent.ItemType<GlockV2>());
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();
@@ -71,6 +72,7 @@ namespace GlockMod.Items.Glocks
             recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 5);
             recipe.AddIngredient(ItemID.TissueSample, 20);
             recipe.AddIngredient(ModContent.ItemType<CoalInfusedLead>());
+            recipe.AddIngredient(ModContent.ItemType<GlockV2>());
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

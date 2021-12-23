@@ -29,7 +29,7 @@ namespace GlockMod.Items.Ammo
             item.rare = ItemRarityID.White;
             item.shoot = ModContent.ProjectileType<glintround>();
             item.shootSpeed = 10f;
-            item.ammo = ModContent.ItemType<GlintRound>();
+            item.ammo = item.type;
             item.consumable = true;
         }
 

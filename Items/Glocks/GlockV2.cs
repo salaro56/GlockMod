@@ -62,6 +62,7 @@ namespace GlockMod.Items.Glocks
             recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 5);
             recipe.AddIngredient(ModContent.ItemType<NaughtyList>(), 1);
             recipe.AddIngredient(ItemID.DemoniteOre, 10);
+            recipe.AddIngredient(ModContent.ItemType<GlockV1>());
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();
@@ -70,6 +71,7 @@ namespace GlockMod.Items.Glocks
             recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 5);
             recipe.AddIngredient(ModContent.ItemType<NaughtyList>(), 1);
             recipe.AddIngredient(ItemID.CrimtaneOre, 10);
+            recipe.AddIngredient(ModContent.ItemType<GlockV1>());
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

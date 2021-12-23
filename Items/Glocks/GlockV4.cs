@@ -63,6 +63,7 @@ namespace GlockMod.Items.Glocks
             recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 5);
             recipe.AddIngredient(ItemID.BeeWax, 5);
             recipe.AddIngredient(ModContent.ItemType<ChristmasWallet>());
+            recipe.AddIngredient(ModContent.ItemType<GlockV3>());
             recipe.AddTile(TileID.Anvils);
             recipe.SetResult(this);
             recipe.AddRecipe();

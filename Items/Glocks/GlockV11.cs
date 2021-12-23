@@ -23,14 +23,14 @@ namespace GlockMod.Items.Glocks
         public override void SafeSetDefaults()
         {
             // item stats
-            item.damage = 78;
-            item.useTime = 12;
-            item.useAnimation = 12;
+            item.damage = 82;
+            item.useTime = 10;
+            item.useAnimation = 10;
             item.value = Item.buyPrice(0, 25, 0, 0);
-            item.shootSpeed = 18f;
+            item.shootSpeed = 20f;
             item.shoot = ModContent.ProjectileType<glintround>();
             item.useAmmo = ModContent.ItemType<GlintRound>();
-            item.crit = 20;
+            item.crit = 22;
 
             // item configs
             item.width = 32;
@@ -46,7 +46,7 @@ namespace GlockMod.Items.Glocks
 
         public override bool ConsumeAmmo(Player p) //Tells the game whether the item consumes ammo or not
         {
-            if (Main.rand.Next(2) == 1)
+            if (Main.rand.NextFloat() < .40f)
             {
                 return false;
             }
@@ -59,10 +59,11 @@ namespace GlockMod.Items.Glocks
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 10);
-            recipe.AddRecipeGroup("IronBar", 10);
-            recipe.AddIngredient(ItemID.Coal, 1);
-            recipe.AddTile(TileID.WorkBenches);
+            recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 5);
+            recipe.AddIngredient(ItemID.FragmentVortex, 5);
+            recipe.AddIngredient(ModContent.ItemType<StarB>());
+            recipe.AddIngredient(ModContent.ItemType<GlockV10>());
+            recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

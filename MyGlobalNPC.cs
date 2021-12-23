@@ -1,4 +1,5 @@
-﻿using GlockMod.Items.Ammo;
+﻿using GlockMod.Items.Accessories;
+using GlockMod.Items.Ammo;
 using GlockMod.Items.Drops;
 using GlockMod.Items.Weapons;
 using System;
@@ -91,17 +92,50 @@ namespace GlockMod
             {
                 Item.NewItem(npc.getRect(), ModContent.ItemType<CoalInfusedLead>());
             }
-            else if(npc.type == NPCID.QueenBee)
+            else if (npc.type == NPCID.QueenBee)
             {
                 Item.NewItem(npc.getRect(), ModContent.ItemType<ChristmasWallet>());
             }
-            else if(npc.type == NPCID.SkeletronHead)
+            else if (npc.type == NPCID.SkeletronHead)
             {
                 Item.NewItem(npc.getRect(), ModContent.ItemType<EnhancedGrip>());
             }
-            else if(npc.type == NPCID.WallofFlesh)
+            else if (npc.type == NPCID.WallofFlesh)
             {
                 Item.NewItem(npc.getRect(), ModContent.ItemType<GiftWrapping>());
+            }
+            else if (npc.type == NPCID.Retinazer && !NPC.AnyNPCs(NPCID.Spazmatism) || npc.type == NPCID.Spazmatism && !NPC.AnyNPCs(NPCID.Retinazer))
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<GlockSights>());
+            }
+            else if (npc.type == NPCID.TheDestroyer)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<GlockAmmoBelt>());
+            }
+            else if (npc.type == NPCID.SkeletronPrime)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<GlockLaser>());
+            }
+            else if (npc.type == NPCID.Plantera)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<Mistletoe>());
+            }
+            else if (npc.type == NPCID.Golem)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<FireSticker>());
+            }
+            else if (npc.type == NPCID.CultistBoss)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<KnittedMittens>());
+            }
+            else if (npc.type == NPCID.MoonLordCore)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<SilverBell>());
+            }
+
+            if (npc.type == NPCID.WallofFlesh && Main.rand.NextFloat() < .50f)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<SaintEmblem>());
             }
         }
     }

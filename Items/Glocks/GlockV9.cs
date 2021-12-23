@@ -17,7 +17,7 @@ namespace GlockMod.Items.Glocks
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Santa's Glock V.9");
-            Tooltip.SetDefault("This fire looks so delightful");
+            Tooltip.SetDefault("The fire looks so delightful");
         }
 
         public override void SafeSetDefaults()
@@ -47,7 +47,7 @@ namespace GlockMod.Items.Glocks
 
         public override bool ConsumeAmmo(Player p) //Tells the game whether the item consumes ammo or not
         {
-            if (Main.rand.Next(2) == 1)
+            if (Main.rand.NextFloat() < .30f)
             {
                 return false;
             }
@@ -60,10 +60,11 @@ namespace GlockMod.Items.Glocks
         public override void AddRecipes()
         {
             ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 10);
-            recipe.AddRecipeGroup("IronBar", 10);
-            recipe.AddIngredient(ItemID.Coal, 1);
-            recipe.AddTile(TileID.WorkBenches);
+            recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 5);
+            recipe.AddIngredient(ItemID.BeetleHusk, 2);
+            recipe.AddIngredient(ModContent.ItemType<FireSticker>());
+            recipe.AddIngredient(ModContent.ItemType<GlockV8>());
+            recipe.AddTile(TileID.MythrilAnvil);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

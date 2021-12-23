@@ -1,3 +1,7 @@
-displayName = The Glock Mod
-author = RockmanSolid
-version = 0.1
+displayName = Holly Jolly Santa Glock
+author = Salaro & RockmanSolid
+version = 0.5
+homepage = https://discord.gg/RmEtB2Nx2k
+hideCode = true
+hideResources = true
+includePDB = false

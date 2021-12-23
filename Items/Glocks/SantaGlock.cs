@@ -27,10 +27,10 @@ namespace GlockMod.Items.Glocks
         {
             // item stats
             item.damage = 110;
-            item.useTime = 12;
-            item.useAnimation = 12;
-            item.value = Item.buyPrice(0, 69, 0, 0);
-            item.shootSpeed = 18f;
+            item.useTime = 10;
+            item.useAnimation = 10;
+            item.value = Item.sellPrice(0, 69, 0, 0);
+            item.shootSpeed = 20f;
             item.shoot = ModContent.ProjectileType<glintround>();
             item.useAmmo = ModContent.ItemType<GlintRound>();
             item.crit = 40;
@@ -42,14 +42,14 @@ namespace GlockMod.Items.Glocks
             item.knockBack = 8f;
             item.noMelee = true;
             item.useStyle = ItemUseStyleID.HoldingOut;
-            item.rare = ItemRarityID.Purple;
+            item.rare = ItemRarityID.Expert;
             item.autoReuse = true;
             item.UseSound = SoundID.Item27;
         }
 
         public override bool ConsumeAmmo(Player p) //Tells the game whether the item consumes ammo or not
         {
-            if (Main.rand.Next(10) == 1)
+            if (Main.rand.NextFloat() < .50f)
             {
                 return false;
             }
@@ -65,7 +65,8 @@ namespace GlockMod.Items.Glocks
             recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 10);
             recipe.AddRecipeGroup("IronBar", 10);
             recipe.AddIngredient(ItemID.Coal, 1);
-            recipe.AddTile(TileID.WorkBenches);
+            recipe.AddIngredient(ModContent.ItemType<GlockV11>());
+            recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }
