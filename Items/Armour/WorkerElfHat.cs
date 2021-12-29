@@ -123,7 +123,7 @@ namespace GlockMod.Items.Armour
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
-            DisplayName.SetDefault("Gift Wrapped Breastplate");
+            DisplayName.SetDefault("Worker Elf Tunic");
             Tooltip.SetDefault("You've got more than toys to make" +
                 "\n6% increased Holly Jolly");
         }

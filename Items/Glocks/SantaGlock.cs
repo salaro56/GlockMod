@@ -63,9 +63,10 @@ namespace GlockMod.Items.Glocks
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 10);
-            recipe.AddRecipeGroup("IronBar", 10);
+            recipe.AddIngredient(ItemID.LunarBar, 10);
             recipe.AddIngredient(ItemID.Coal, 1);
             recipe.AddIngredient(ModContent.ItemType<GlockV11>());
+            recipe.AddIngredient(ModContent.ItemType<SilverBell>());
             recipe.AddTile(TileID.LunarCraftingStation);
             recipe.SetResult(this);
             recipe.AddRecipe();

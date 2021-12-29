@@ -17,7 +17,7 @@ namespace GlockMod.Items.Accessories
         {
             DisplayName.SetDefault("Santa's Beard");
             Tooltip.SetDefault("Still smells like milk and cookies" +
-                "\n4% increased Holly Jolly");
+                "\n5% increased Holly Jolly");
         }
 
         public override void SetDefaults()
@@ -32,7 +32,7 @@ namespace GlockMod.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             DamagePlayer modPlayer = DamagePlayer.ModPlayer(player);
-            modPlayer.hjdDamageMult *= 1.04f;
+            modPlayer.hjdDamageMult *= 1.05f;
         }
     }
 }

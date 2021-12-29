@@ -64,7 +64,7 @@ namespace GlockMod.NPCs.Mobs
         {
             if (Main.rand.NextFloat() < .35f)
             {
-				Item.NewItem(npc.getRect(), ModContent.ItemType<ChristmasCheer>(), 3 + Main.rand.Next(3));
+				Item.NewItem(npc.getRect(), ModContent.ItemType<ChristmasCheer>(), 5 + Main.rand.Next(5));
 			}
 			else if (Main.rand.NextFloat() < .70f)
 			{
@@ -130,7 +130,7 @@ namespace GlockMod.NPCs.Mobs
 		{
 			if (Main.rand.NextFloat() < .35f)
 			{
-				Item.NewItem(npc.getRect(), ModContent.ItemType<ChristmasCheer>(), 3 + Main.rand.Next(3));
+				Item.NewItem(npc.getRect(), ModContent.ItemType<ChristmasCheer>(), 5 + Main.rand.Next(5));
 			}
 			else if (Main.rand.NextFloat() < .70f)
 			{
@@ -197,7 +197,7 @@ namespace GlockMod.NPCs.Mobs
 		{
 			if (Main.rand.NextFloat() < .35f)
 			{
-				Item.NewItem(npc.getRect(), ModContent.ItemType<ChristmasCheer>(), 3 + Main.rand.Next(3));
+				Item.NewItem(npc.getRect(), ModContent.ItemType<ChristmasCheer>(), 5 + Main.rand.Next(5));
 			}
 			else if (Main.rand.NextFloat() < .70f)
 			{

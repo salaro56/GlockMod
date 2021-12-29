@@ -23,3 +23,17 @@ Thank you all so much for playing and enjoying the mod! It means a lot to me!
 This mod is still in early access and will see frequent updates until I can finish all of my planned content!
 Feel free to leave suggestions for items that you want to see added to the mod in the discord server for the mod.
 This mod isn't done and I'll be continuing to add stuff to it even once I'm done my planned content!
+
+Update Changelog V.1.1.0.2
+
+Changes:
+Increased Santa's Beard damage boost to 5%
+Fixed name of the Elf Armour breastplate
+Fixed recipe of Santa's Glock
+Increased drop rate and drop amount of Elf
+
+What's New:
+Added "Gift Bow"
+- A new weapon that can be made after killing the World Evil boss
+Added "Jolly Rifle"
+- A new gun that spawns in locked chests in the dungeon (temporary, will drop from a mob in the future)
