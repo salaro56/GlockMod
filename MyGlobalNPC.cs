@@ -40,13 +40,11 @@ namespace GlockMod
 
                 case NPCID.ArmsDealer:
                     {
-                        if(Main.hardMode == true)
+                        shop.item[nextSlot].SetDefaults(ModContent.ItemType<GlintRound>());
+                        nextSlot++;
+                        if(NPC.downedPlantBoss == true)
                         {
-
-                        }
-                        else
-                        {
-                            shop.item[nextSlot].SetDefaults(ModContent.ItemType<GlintRound>());
+                            shop.item[nextSlot].SetDefaults(ModContent.ItemType<ChlorophyteGlitter>());
                             nextSlot++;
                         }
                         break;

@@ -25,7 +25,7 @@ namespace GlockMod.Items.Ammo
             item.maxStack = 999;
             item.consumable = true;
             item.knockBack = 1f;
-            item.value = 50;
+            item.value = Item.buyPrice(0,0,0,10);
             item.rare = ItemRarityID.White;
             item.shoot = ModContent.ProjectileType<glintround>();
             item.shootSpeed = 10f;
