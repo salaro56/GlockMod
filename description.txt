@@ -24,6 +24,27 @@ This mod is still in early access and will see frequent updates until I can fini
 Feel free to leave suggestions for items that you want to see added to the mod in the discord server for the mod.
 This mod isn't done and I'll be continuing to add stuff to it even once I'm done my planned content!
 
+Update Changelog V.1.1.1
+Ammo Update:
+Added new ammo types to add new types of play for the glock and other gun types of weapons
+
+Changes:
+- Chlorophyte Glitter can be made with only 1 bar now
+
+What's New:
+Added "Roasted Chestnut"
+- A new type of ammo that shatters upon hitting a target. Makes for great crowd control although being weaker
+Added "Sharp Candy Cane"
+- A new type of ammo that pierces through a large amount of mobs. Makes for great crowd control.
+Added "Endless Glint Pouch"
+- A new type of ammo that's allows for infinite Glint Rounds.
+
+Update Changelog V.1.1.0.3
+
+Changes:
+Arms dealer now always sells glintround
+Arms dealer sells chlorophyte rounds after you beat Plantera
+
 Update Changelog V.1.1.0.2
 
 Changes:

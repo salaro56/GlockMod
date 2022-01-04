@@ -21,18 +21,16 @@ namespace GlockMod
             {
                 case NPCID.Merchant:
                 {
-
-                        if(NPC.downedBoss1 == true)
+                        shop.item[nextSlot].SetDefaults(ModContent.ItemType<FragileOrnament>());
+                        nextSlot++;
+                        if (NPC.downedBoss1 == true)
                         {
                             shop.item[nextSlot].SetDefaults(ModContent.ItemType<WrappingPaper>());
-                            nextSlot++;
-                            shop.item[nextSlot].SetDefaults(ModContent.ItemType<FragileOrnament>());
                             nextSlot++;
                         }
                         else
                         {
-                            shop.item[nextSlot].SetDefaults(ModContent.ItemType<FragileOrnament>());
-                            nextSlot++;
+
                         }
 
                         break;
@@ -45,6 +43,11 @@ namespace GlockMod
                         if(NPC.downedPlantBoss == true)
                         {
                             shop.item[nextSlot].SetDefaults(ModContent.ItemType<ChlorophyteGlitter>());
+                            nextSlot++;
+                        }
+                        if(Main.hardMode == true)
+                        {
+                            shop.item[nextSlot].SetDefaults(ModContent.ItemType<RoastedChestnut>());
                             nextSlot++;
                         }
                         break;
@@ -131,9 +134,22 @@ namespace GlockMod
                 Item.NewItem(npc.getRect(), ModContent.ItemType<SilverBell>());
             }
 
-            if (npc.type == NPCID.WallofFlesh && Main.rand.NextFloat() < .50f)
+            if (npc.type == NPCID.WallofFlesh && Main.rand.NextFloat() < .50f && Main.expertMode == false)
             {
                 Item.NewItem(npc.getRect(), ModContent.ItemType<SaintEmblem>());
+            }
+
+            if(npc.type == NPCID.ManEater && Main.rand.NextFloat() < 60f)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<chestnut>());
+            }
+            if (npc.type == NPCID.Snatcher && Main.rand.NextFloat() < 60f)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<chestnut>());
+            }
+            if (npc.type == NPCID.AngryTrapper && Main.rand.NextFloat() < 60f)
+            {
+                Item.NewItem(npc.getRect(), ModContent.ItemType<chestnut>());
             }
         }
     }

@@ -30,7 +30,6 @@ namespace GlockMod.Items.Ammo
             item.shoot = ModContent.ProjectileType<glintround>();
             item.shootSpeed = 10f;
             item.ammo = item.type;
-            item.consumable = true;
         }
 
         public override void AddRecipes()
@@ -43,8 +42,4 @@ namespace GlockMod.Items.Ammo
             recipe.AddRecipe();
         }
     }
-
-
-
-
 }
