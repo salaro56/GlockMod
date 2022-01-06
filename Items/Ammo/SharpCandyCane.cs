@@ -41,7 +41,7 @@ namespace GlockMod.Items.Ammo
             recipe.AddIngredient(ModContent.ItemType<GlintRound>(), 70);
             recipe.AddIngredient(ItemID.CandyCaneBlock, 10);
             recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this);
+            recipe.SetResult(this, 70);
             recipe.AddRecipe();
         }
     }

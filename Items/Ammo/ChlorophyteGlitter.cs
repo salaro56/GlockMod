@@ -41,7 +41,7 @@ namespace GlockMod.Items.Ammo
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ModContent.ItemType<GlintRound>(), 70);
             recipe.AddIngredient(ItemID.ChlorophyteBar, 1);
-            recipe.SetResult(this, 100);
+            recipe.SetResult(this, 70);
             recipe.AddTile(TileID.MythrilAnvil);
             recipe.AddRecipe();
         }

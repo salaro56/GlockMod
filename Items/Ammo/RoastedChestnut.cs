@@ -40,7 +40,7 @@ namespace GlockMod.Items.Ammo
             recipe.AddIngredient(ModContent.ItemType<chestnut>());
             recipe.AddIngredient(ModContent.ItemType<GlintRound>(), 70);
             recipe.AddTile(TileID.Furnaces);
-            recipe.SetResult(this);
+            recipe.SetResult(this, 70);
             recipe.AddRecipe();
         }
     }
