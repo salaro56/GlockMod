@@ -24,6 +24,15 @@ This mod is still in early access and will see frequent updates until I can fini
 Feel free to leave suggestions for items that you want to see added to the mod in the discord server for the mod.
 This mod isn't done and I'll be continuing to add stuff to it even once I'm done my planned content!
 
+Update Changelog V.1.2
+Weapon Update Part One:
+Added "Nog Bomba"
+- A grenade like weapon that applies the ichor debuff to targets that it hits. Very strong but make sure not to stand in the explosion
+Added "Chipped Gingerbread"
+- A boomerang weapon that isn't very special but it doesn't good damage and can pierce a single enemy for extra damage
+Added "Candy Cane Spear"
+- A simple spear weapon that looks like a candy cane. It's FESTIVE
+
 Update Changelog V.1.1.1
 Ammo Update:
 Added new ammo types to add new types of play for the glock and other gun types of weapons

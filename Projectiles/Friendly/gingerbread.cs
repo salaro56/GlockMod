@@ -26,6 +26,7 @@ namespace GlockMod.Projectiles.Friendly
             projectile.width = 26;
             projectile.height = 32;
             projectile.friendly = true;
+            projectile.penetrate = 1;
             aiType = ProjectileID.WoodenBoomerang;
             projectile.CloneDefaults(ProjectileID.WoodenBoomerang);
         }
