@@ -25,19 +25,19 @@ namespace GlockMod.Items.Weapons.Ranged
         {
             item.CloneDefaults(ItemID.WoodenBoomerang);
             //item stats
-            item.damage = 12;
+            item.damage = 16;
             item.knockBack = 4;
-            item.crit = 4;
-            item.value = Item.sellPrice(0, 0, 10, 50);
+            item.crit = 6;
+            item.value = Item.sellPrice(0, 0, 3, 50);
             item.rare = ItemRarityID.Blue;
             item.shoot = ModContent.ProjectileType<gingerbread>();
-            item.shootSpeed = 8f;
+            item.shootSpeed = 10f;
 
             //item configs
             item.width = 26;
             item.height = 32;
-            item.useAnimation = 15;
-            item.useTime = 15;
+            item.useAnimation = 8;
+            item.useTime = 8;
             item.autoReuse = false;
             item.UseSound = SoundID.Item7;
             item.noUseGraphic = true;
@@ -64,6 +64,7 @@ namespace GlockMod.Items.Weapons.Ranged
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ModContent.ItemType<ChristmasCheer>(), 5);
             recipe.AddIngredient(ItemID.GingerbreadCookie);
+            recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this);
             recipe.AddRecipe();
         }

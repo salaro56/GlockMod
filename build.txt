@@ -1,6 +1,6 @@
-displayName = Holly Jolly Santa Glock
+displayName = Holly Jolly Yuletide
 author = Salaro & RockmanSolid
-version = 1.2
+version = 1.2.5
 homepage = https://discord.gg/RmEtB2Nx2k
 hideCode = true
 hideResources = true
