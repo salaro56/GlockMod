@@ -28,11 +28,6 @@ namespace GlockMod
                             shop.item[nextSlot].SetDefaults(ModContent.ItemType<WrappingPaper>());
                             nextSlot++;
                         }
-                        else
-                        {
-
-                        }
-
                         break;
                 }
 
@@ -87,51 +82,51 @@ namespace GlockMod
 
             if (npc.type == NPCID.EyeofCthulhu)
             {
-                Item.NewItem(npc.getRect(), ModContent.ItemType<NaughtyList>());
+                npc.DropItemInstanced(npc.position, npc.Size, ModContent.ItemType<NaughtyList>(), 1, true);
             }
             else if (npc.boss && System.Array.IndexOf(new int[] { NPCID.EaterofWorldsBody, NPCID.EaterofWorldsHead, NPCID.EaterofWorldsTail }, npc.type) > -1)
             {
-                Item.NewItem(npc.getRect(), ModContent.ItemType<CoalInfusedLead>());
+                npc.DropItemInstanced(npc.position, npc.Size, ModContent.ItemType<CoalInfusedLead>(), 1, true);
             }
             else if (npc.type == NPCID.QueenBee)
             {
-                Item.NewItem(npc.getRect(), ModContent.ItemType<ChristmasWallet>());
+                npc.DropItemInstanced(npc.position, npc.Size, ModContent.ItemType<ChristmasWallet>(), 1, true);
             }
             else if (npc.type == NPCID.SkeletronHead)
             {
-                Item.NewItem(npc.getRect(), ModContent.ItemType<EnhancedGrip>());
+                npc.DropItemInstanced(npc.position, npc.Size, ModContent.ItemType<EnhancedGrip>(), 1, true);
             }
             else if (npc.type == NPCID.WallofFlesh)
             {
-                Item.NewItem(npc.getRect(), ModContent.ItemType<GiftWrapping>());
+                npc.DropItemInstanced(npc.position, npc.Size, ModContent.ItemType<GiftWrapping>(), 1, true);
             }
             else if (npc.type == NPCID.Retinazer && !NPC.AnyNPCs(NPCID.Spazmatism) || npc.type == NPCID.Spazmatism && !NPC.AnyNPCs(NPCID.Retinazer))
             {
-                Item.NewItem(npc.getRect(), ModContent.ItemType<GlockSights>());
+                npc.DropItemInstanced(npc.position, npc.Size, ModContent.ItemType<GlockSights>(), 1, true);
             }
             else if (npc.type == NPCID.TheDestroyer)
             {
-                Item.NewItem(npc.getRect(), ModContent.ItemType<GlockAmmoBelt>());
+                npc.DropItemInstanced(npc.position, npc.Size, ModContent.ItemType<GlockAmmoBelt>(), 1, true);
             }
             else if (npc.type == NPCID.SkeletronPrime)
             {
-                Item.NewItem(npc.getRect(), ModContent.ItemType<GlockLaser>());
+                npc.DropItemInstanced(npc.position, npc.Size, ModContent.ItemType<GlockLaser>(), 1, true);
             }
             else if (npc.type == NPCID.Plantera)
             {
-                Item.NewItem(npc.getRect(), ModContent.ItemType<Mistletoe>());
+                npc.DropItemInstanced(npc.position, npc.Size, ModContent.ItemType<Mistletoe>(), 1, true);
             }
             else if (npc.type == NPCID.Golem)
             {
-                Item.NewItem(npc.getRect(), ModContent.ItemType<FireSticker>());
+                npc.DropItemInstanced(npc.position, npc.Size, ModContent.ItemType<FireSticker>(), 1, true);
             }
             else if (npc.type == NPCID.CultistBoss)
             {
-                Item.NewItem(npc.getRect(), ModContent.ItemType<KnittedMittens>());
+                npc.DropItemInstanced(npc.position, npc.Size, ModContent.ItemType<KnittedMittens>(), 1, true);
             }
             else if (npc.type == NPCID.MoonLordCore)
             {
-                Item.NewItem(npc.getRect(), ModContent.ItemType<SilverBell>());
+                npc.DropItemInstanced(npc.position, npc.Size, ModContent.ItemType<SilverBell>(), 1, true);
             }
 
             if (npc.type == NPCID.WallofFlesh && Main.rand.NextFloat() < .50f && Main.expertMode == false)

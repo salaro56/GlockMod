@@ -16,10 +16,9 @@ namespace GlockMod.HJD
             return player.GetModPlayer<DamagePlayer>();
         }
 
-        public float hjdDamageAdd;
-        public float hjdDamageMult = 1f;
-        public float hjdKnockback;
-        public int hjdCrit;
+        public float modDamageMult = 1f;
+        public float modKnockbackMult = 1f;
+        public int modCritBonus = 0;
 
         public override void ResetEffects()
         {
@@ -33,10 +32,9 @@ namespace GlockMod.HJD
 
         private void ResetVariables()
         {
-            hjdDamageAdd = 0f;
-            hjdDamageMult = 1f;
-            hjdKnockback = 0f;
-            hjdCrit = 4;
+            modDamageMult = 1f;
+            modKnockbackMult = 1f;
+            modCritBonus = 0;
         }
     }
 }

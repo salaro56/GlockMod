@@ -23,7 +23,7 @@ namespace GlockMod.Items.Weapons.Ranged
         public override void SafeSetDefaults()
         {
             // item stats
-            item.damage = 38;
+            item.damage = 55;
             item.useTime = 12;
             item.useAnimation = 12;
             item.reuseDelay = 20;

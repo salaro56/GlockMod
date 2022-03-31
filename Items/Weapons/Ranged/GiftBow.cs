@@ -24,10 +24,10 @@ namespace GlockMod.Items.Weapons.Ranged
             item.width = 16;
             item.height = 32;
             item.shoot = ProjectileID.WoodenArrowFriendly;
-            item.damage = 22;
+            item.damage = 18;
             item.useAmmo = AmmoID.Arrow;
             item.shootSpeed = 14f;
-            item.autoReuse = true;
+            item.autoReuse = false;
             item.knockBack = 3;
             item.crit = 5;
             item.UseSound = SoundID.Item5;

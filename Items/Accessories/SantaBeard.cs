@@ -32,7 +32,7 @@ namespace GlockMod.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             DamagePlayer modPlayer = DamagePlayer.ModPlayer(player);
-            modPlayer.hjdDamageMult *= 1.05f;
+            modPlayer.modDamageMult *= 1.05f;
         }
     }
 }

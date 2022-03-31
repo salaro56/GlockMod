@@ -45,8 +45,8 @@ namespace GlockMod.Items.Armour
         public override void UpdateEquip(Player player)
         {
             DamagePlayer modPlayer = DamagePlayer.ModPlayer(player);
-            modPlayer.hjdDamageMult *= 1.06f;
-            modPlayer.hjdCrit *= (int)1.1f;
+            modPlayer.modDamageMult *= 1.06f;
+            modPlayer.modCritBonus *= (int)1.1f;
         }
 
         public override void AddRecipes()
@@ -92,7 +92,7 @@ namespace GlockMod.Items.Armour
         public override void UpdateEquip(Player player)
         {
             DamagePlayer modPlayer = DamagePlayer.ModPlayer(player);
-            modPlayer.hjdDamageMult *= 1.06f;
+            modPlayer.modDamageMult *= 1.06f;
         }
 
         public override void AddRecipes()
@@ -145,7 +145,7 @@ namespace GlockMod.Items.Armour
         public override void UpdateEquip(Player player)
         {
             DamagePlayer modPlayer = DamagePlayer.ModPlayer(player);
-            modPlayer.hjdDamageMult *= 1.06f;
+            modPlayer.modDamageMult *= 1.06f;
         }
 
         public override void AddRecipes()

@@ -13,7 +13,12 @@ namespace GlockMod.HJD
     public abstract class HollyJollyItem : ModItem
     {
         public override bool CloneNewInstances => true;
-        
+
+
+        public float modDamageMult = 1f;
+        public float modKnockbackMult;
+        public int modCritBonus;
+
         public virtual void SafeSetDefaults()
         {
 
@@ -34,7 +39,12 @@ namespace GlockMod.HJD
             var prefixChooser = new WeightedRandom<int>();
             prefixChooser.Add(mod.PrefixType("CheefulPrefix"), 3);
             prefixChooser.Add(mod.PrefixType("FrugalPrefix"), 2);
+            prefixChooser.Add(mod.PrefixType("Naughty"), 2);
             prefixChooser.Add(mod.PrefixType("FestivePrefix"), 1);
+            prefixChooser.Add(PrefixID.Damaged, 2);
+            prefixChooser.Add(PrefixID.Keen, 3);
+            prefixChooser.Add(PrefixID.Strong, 3);
+            prefixChooser.Add(PrefixID.Weak, 2);
             int choice = prefixChooser;
             if((item.damage > 0) && item.maxStack == 1)
             {
@@ -49,18 +59,17 @@ namespace GlockMod.HJD
         }
         public override void ModifyWeaponDamage(Player player, ref float add, ref float mult, ref float flat)
         {
-            add += DamagePlayer.ModPlayer(player).hjdDamageAdd;
-            mult *= DamagePlayer.ModPlayer(player).hjdDamageMult;
+            mult *= DamagePlayer.ModPlayer(player).modDamageMult;
         }
 
         public override void GetWeaponKnockback(Player player, ref float knockback)
         {
-            knockback += DamagePlayer.ModPlayer(player).hjdKnockback;
+            knockback *= DamagePlayer.ModPlayer(player).modKnockbackMult;
         }
 
         public override void GetWeaponCrit(Player player, ref int crit)
         {
-            crit += DamagePlayer.ModPlayer(player).hjdCrit;
+            crit += DamagePlayer.ModPlayer(player).modCritBonus;
         }
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
