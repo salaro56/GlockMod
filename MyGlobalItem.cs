@@ -7,6 +7,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using GlockMod.Items.Accessories;
+using GlockMod.HJD;
 
 namespace GlockMod
 {
